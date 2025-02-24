@@ -1,15 +1,16 @@
 name: write to DB
 
-on: workflow_dispatch:
-  inputs:
-    filename:
-      description: 'name of the file to write to'
-      required: true
-      type: string
-    data:
-      description: 'data to write to the file'
-      required: true
-      type: object
+on:
+  workflow_dispatch:
+    inputs:
+      filename:
+        description: 'name of the file to write to'
+        required: true
+        type: string
+      data:
+        description: 'data to write to the file'
+        required: true
+        type: object
 jobs:
   build:
     runs-on: ubuntu-latest
