@@ -32,7 +32,7 @@ jobs:
         
 
       - name: write data to file
-        run: python write_data.py --file ${{ inputs.filename }} --data "${{ inputs.data/\\\"/\\\\\\\"/g }}"
+        run: python write_data.py --file ${{ inputs.filename }} --data "${{ inputs.data }}"
 
       - name: Commit changes
         run: |
