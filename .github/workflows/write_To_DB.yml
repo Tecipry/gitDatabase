@@ -21,3 +21,19 @@ jobs:
         run: |
           echo "String input: ${{ inputs.filename }}"
           echo "JSON input: ${{ inputs.data }}"
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+        python-version: '3.x'
+
+      - name: write data to file
+        run: python write_data.py # Replace with your script name
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data.json
+          git commit -m "Update data.json" -a || echo "No changes to commit"
+          git push
