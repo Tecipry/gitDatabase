@@ -19,5 +19,5 @@ jobs:
 
       - name: Print inputs
         run: |
-        echo "String input: ${{ github.event.inputs.filename }}"
-        echo "JSON input: ${{ github.event.inputs.data }}"
+        echo "String input: ${{ inputs.filename }}"
+        echo "JSON input: ${{ inputs.data }}"
