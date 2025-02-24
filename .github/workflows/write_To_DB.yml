@@ -36,6 +36,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add databank/${{ inputs.filename }}
+          git add database/${{ inputs.filename }}
           git commit -m "Update data.json" -a || echo "No changes to commit"
           git push
