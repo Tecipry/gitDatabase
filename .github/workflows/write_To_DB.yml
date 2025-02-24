@@ -1,6 +1,6 @@
 name: write to DB
 
-on: workflow_dispatch
+on: workflow_dispatch:
   inputs:
     filename:
       description: 'name of the file to write to'
