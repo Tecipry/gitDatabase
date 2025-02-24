@@ -29,8 +29,10 @@ jobs:
         with:
           python-version: "3.x"
         
+        
+
       - name: write data to file
-        run: python write_data.py --file "${{ inputs.filename }}" --data "${{ inputs.data/\"/\\\" }}" # Replace with your script name
+        run: python write_data.py --file ${{ inputs.filename }} --data "${{ inputs.data/\"/\\\"/g }}" # Replace with your script name
 
       - name: Commit changes
         run: |
